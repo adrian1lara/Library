@@ -66,11 +66,31 @@ function displayBooks() {
         readLabel.textContent = `Read: ${book.read ? 'Yes' : 'No'}`;
 
         const vid = document.createElement('div');
+        const removeButton = document.createElement('button');
+        const readButton = document.createElement('button');
+
+        removeButton.className = 'remove-button';
+        removeButton.textContent = 'Remove';
+        removeButton.addEventListener('click', () => {
+            myLibrary.splice(myLibrary.indexOf(book), 1)
+            displayBooks()
+        })
+
+        readButton.className = 'read-button';
+        readButton.textContent = 'Read';
+        readButton.addEventListener('click', () => {
+            book.read = !book.read
+            displayBooks()
+        })
+
+        
         vid.className = 'ebook';
         vid.appendChild(titleLabel);
         vid.appendChild(authorLabel);
         vid.appendChild(pagesLabel);
         vid.appendChild(readLabel);
+        vid.appendChild(removeButton);
+        vid.appendChild(readButton);
 
         vid.style.display = 'flex'
         booksDiv.appendChild(vid);
