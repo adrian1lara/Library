@@ -91,14 +91,32 @@ input {
     padding: 10px;
     border-radius: 5px;
     border: 1px solid black;
+    justify-content: center;
+    align-items: center;
 }
 
 .ebook p {
     margin: 10px;
-    
+
 }
 
+.remove-button {
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: 10px;
+    margin: 10px;
+}
 
+.read-button {
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: 10px;
+    margin: 10px;
+}
 
 
 
