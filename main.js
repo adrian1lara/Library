@@ -56,9 +56,27 @@ function addBooktoLibrary() {
 function displayBooks() {
     booksDiv.textContent = ''
     myLibrary.forEach(book => {
-        const bookInfoDiv = document.createElement('div')
-        bookInfoDiv.textContent = `Title: ${book.title} Author: ${book.author} Pages: ${book.pages} Read: ${book.read ? 'Yes' : 'No'}`
-        booksDiv.appendChild(bookInfoDiv)
+        const titleLabel = document.createElement('p');
+        titleLabel.textContent = `Title: ${book.title}`;
+        const authorLabel = document.createElement('p');
+        authorLabel.textContent = `Author: ${book.author}`;
+        const pagesLabel = document.createElement('p');
+        pagesLabel.textContent = `Pages: ${book.pages}`;
+        const readLabel = document.createElement('p');
+        readLabel.textContent = `Read: ${book.read ? 'Yes' : 'No'}`;
+
+        const vid = document.createElement('div');
+        vid.className = 'ebook';
+        vid.appendChild(titleLabel);
+        vid.appendChild(authorLabel);
+        vid.appendChild(pagesLabel);
+        vid.appendChild(readLabel);
+
+        vid.style.display = 'flex'
+        booksDiv.appendChild(vid);
+        
+
+
     })
 
     titleInput.value = ''
@@ -69,6 +87,18 @@ function displayBooks() {
     formDiv.style.display = 'none'
 }
 
+/* new button cancel to hide the form*/
+function cancel() {
+    formDiv.style.display = 'none'
+
+    titleInput.value = ''
+    authorInput.value = ''
+    pagesInput.value = ''
+    readInput.checked = false
+
+}
+
 showForm.addEventListener('click', () => {
     formDiv.style.display = 'block'
 })
+
