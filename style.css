@@ -5,6 +5,42 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+header {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    height: 80px;
+}
+
+header h1 {
+    font-size: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-transform: uppercase;
+    font-weight: lighter;
+    letter-spacing: 2px;
+}
+
+header button {
+    font-size: 30px;
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+    border: none;
+    border-radius: 10%;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+header button:hover {
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    transition: 0.3s;
+}
+
+main {
+    display: flex;
+}
+
+
 .form-book {
     width: 300px;
     height: 300px;
@@ -18,7 +54,28 @@
     padding: 20px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     width: 300px;
+    border-radius: 15px;
     margin: 0 auto;
+    text-align: center;
+
+}
+
+
+input {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+#form button {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    cursor: pointer;
 }
 
 .error-message {
@@ -26,6 +83,22 @@
     display: none;
     font-size: 10px;
 }
+
+
+.ebook {
+    display: none;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.ebook p {
+    margin: 10px;
+    
+}
+
+
 
 
 
